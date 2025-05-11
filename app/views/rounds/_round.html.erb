@@ -1,0 +1,28 @@
+<div id="<%= dom_id round %>">
+  <p>
+    <strong>Golfer:</strong>
+    <%= round.user&.name || "No user assigned" %>
+
+  </p>
+
+  <p>
+    <strong>Course:</strong>
+    <%= round.course.name %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= round.date %>
+  </p>
+
+  <p>
+    <strong>Strokes:</strong>
+    <%= round.strokes %>
+  </p>
+
+  <p>
+    <strong>Handicap:</strong>
+    <%= round.handicap_estimate%>
+  </p>
+
+</div>
