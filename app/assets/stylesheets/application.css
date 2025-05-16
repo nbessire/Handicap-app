@@ -8,3 +8,81 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #41f061;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #41f061;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    flex: 0 0 auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links a {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-logo {
+    height: 40px;
+    object-fit: contain;
+    vertical-align: middle;
+}

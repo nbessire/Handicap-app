@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title><%= content_for(:title) || "Final Project" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,17 +18,22 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%= link_to "Manage Rounds", rounds_path %> |
-    <%= link_to "Manage Courses", courses_path %> |
-    <%= link_to "Manage Users", users_path %>
-
-
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+    <nav>
+        <%= image_tag("clipart3236127.png", alt: "Logo", class: "nav-logo") %>
+        <%= link_to "Manage Rounds", rounds_path %> |
+        <%= link_to "Manage Courses", courses_path %> |
+        <%= link_to "Manage Users", users_path %>
+    </nav>
+
+    <div class="container">
+        <%= yield %>
+    </div>
+</body>
+
 </html>
