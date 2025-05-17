@@ -1,17 +1,14 @@
-<div id="<%= dom_id course %>">
-  <p>
-    <strong>Name:</strong>
-    <%= course.name %>
-  </p>
+<div class="course-card">
+    <div class="course-details">
+        <p><strong>Name:</strong> <%= course.name %></p>
+        <p><strong>Location:</strong> <%= course.location %></p>
+        <p><strong>Par:</strong> <%= course.par %></p>
+        <p><%= link_to "Show this course", course %></p>
+    </div>
 
-  <p>
-    <strong>Location:</strong>
-    <%= course.location %>
-  </p>
-
-  <p>
-    <strong>Par:</strong>
-    <%= course.par %>
-  </p>
-
+    <% if course.image.attached? %>
+    <div class="course-image">
+        <%= image_tag course.image %>
+    </div>
+    <% end %>
 </div>
