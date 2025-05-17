@@ -67,6 +67,6 @@ class RoundsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def round_params
       #params.expect(round: [ :user_name, :course_id, :date, :strokes ])
-      params.require(:round).permit(:user_id, :course_id, :date, :strokes)
+      params.require(:round).permit(:user_id, :course_id, :date, :strokes, photos: [])
     end
 end

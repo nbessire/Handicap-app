@@ -25,4 +25,13 @@
     <%= round.to_par%>
   </p>
 
+  <% if round.photos.attached? %>
+  <h3>Photos:</h3>
+  <% round.photos.each do |photo| %>
+    <%= image_tag photo, style: "max-width: 300px; height: auto; margin: 10px;" %>
+  <% end %>
+<% else %>
+  <p>No photos uploaded for this round.</p>
+<% end %>
+
 </div>
